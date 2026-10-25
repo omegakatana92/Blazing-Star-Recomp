@@ -14,6 +14,9 @@
 #   BLAZSTAR_ROM_DIR=/path/to/roms ./scripts/build-appimage.sh
 set -euo pipefail
 
+# AppImage tooling runs without FUSE on Steam Deck and in CI.
+export APPIMAGE_EXTRACT_AND_RUN=1
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
