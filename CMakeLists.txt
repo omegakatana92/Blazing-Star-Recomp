@@ -68,8 +68,12 @@ if(BLAZSTAR_ROM_DIR)
         COMMENT "Profiling a scripted session for runtime-only entry points")
     target_compile_definitions(blazingstar PRIVATE BLAZSTAR_HAVE_RECOMP)
     if(MSVC)
-        # Generated routines are large; /bigobj lifts the section limit.
-        set_source_files_properties(${GEN_SOURCES} PROPERTIES COMPILE_OPTIONS "/bigobj")
+        # Generated routines are huge. /bigobj lifts the section limit. /O1
+        # keeps compile time sane: /O2 on these multi-thousand-block functions
+        # takes ~10 minutes *per file* (hours in total). /MP4 compiles the 32
+        # generated files in parallel. Raise to /O2 only if you can wait.
+        set_source_files_properties(${GEN_SOURCES} PROPERTIES
+            COMPILE_OPTIONS "/bigobj;/O1;/MP4")
     endif()
 endif()
 if(MSVC)

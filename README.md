@@ -58,7 +58,8 @@ Prerequisites: Git, CMake 3.21+, Visual Studio 2022/2026 with *Desktop developme
 C++* (or another C/C++ toolchain), and SDL2 for the window (optional — a headless build
 needs nothing extra).
 
-1. Clone this repo with the toolkit submodule, and unzip your ROMs into `roms/`.
+1. Clone this repo (the toolkit is vendored under `neogeorecomp/`), and unzip your ROMs
+   into `roms/`.
 2. Configure (point CMake at SDL2 with `-DSDL2_DIR=<SDL2-devel-VC>/cmake` for a window):
    ```
    cmake -S . -B build -DBLAZSTAR_ROM_DIR=roms
@@ -67,6 +68,11 @@ needs nothing extra).
    ```
    cmake --build build --config Release
    ```
+   The generated files are compiled with `/O1` and `/MP4`. MSVC `/O2` on these
+   multi-thousand-block functions takes roughly ten minutes *per file*; `/O1` plus
+   four-way parallel compilation brings the whole build down to a few minutes. If
+   you want maximum runtime speed and can wait, raise `/O1` to `/O2` in
+   `CMakeLists.txt`.
 4. Profile (optional): play scripted sessions headless to find code only reached at
    runtime, then rebuild with it:
    ```
