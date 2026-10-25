@@ -1,0 +1,6 @@
+# Insert a coin and start the game; the BIOS registers a coin over a few frames.
+# Blazing Star: 5 = coin, 1 = start (P1), arrows move, Z/X/C/V = A/B/C/D.
+900 coin
+1000 start
+1300-1700 right
+1400 a

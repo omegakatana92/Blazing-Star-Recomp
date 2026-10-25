@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Blazing Star
+Comment=Native recompilation of Blazing Star (SNK Neo Geo, 1998)
+Exec=blazingstar
+Icon=blazingstar
+Terminal=false
+Type=Application
+Categories=Game;ArcadeGame;

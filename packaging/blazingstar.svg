@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- A simple, original placeholder icon (not derived from the game). -->
+  <rect width="256" height="256" rx="32" fill="#0b1020"/>
+  <circle cx="128" cy="128" r="84" fill="none" stroke="#3aa0ff" stroke-width="12"/>
+  <path d="M40 128 L128 48 L216 128 L128 208 Z" fill="none" stroke="#ffd23a" stroke-width="10" stroke-linejoin="round"/>
+  <text x="128" y="150" font-family="sans-serif" font-size="56" font-weight="bold" fill="#ffffff" text-anchor="middle">BS</text>
+</svg>

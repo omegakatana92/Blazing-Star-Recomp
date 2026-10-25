@@ -1,0 +1,24 @@
+#!/bin/sh
+# AppRun — the entry point of the Blazing Star AppImage.
+# The game is a static recompilation and needs the user's own ROM files, which
+# are not bundled. It looks for them in, in order: a `roms/` directory next to
+# this AppImage, $HOME/.local/share/blazingstar/roms, or the --rom-path you give.
+set -e
+
+HERE="$(dirname "$(readlink -f "$0")")"
+export LD_LIBRARY_PATH="$HERE/usr/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+
+ROM_PATH=""
+for d in "$HERE/roms" "$HOME/.local/share/blazingstar/roms"; do
+    if [ -d "$d" ]; then
+        ROM_PATH="$d"
+        break
+    fi
+done
+
+BIN="$HERE/usr/bin/blazingstar"
+if [ -n "$ROM_PATH" ]; then
+    exec "$BIN" --rom-path "$ROM_PATH" "$@"
+else
+    exec "$BIN" "$@"
+fi

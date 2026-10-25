@@ -1,0 +1,20 @@
+# A longer scripted session: past the title, ship select and deep into Stage 1.
+# Blazing Star: 5 = coin, 1 = start (P1), arrows move, Z/X/C/V = A/B/C/D.
+# 'a' is the main fire; it is held for long stretches to exercise gameplay code.
+900 coin
+1000 start
+1200 start
+1300-10000 a
+1500-3000 right
+3000-4500 left
+4500-6000 down
+6000-7500 up
+7500-9000 right
+9000-10500 left
+10500-12000 down
+12000-13500 up
+13500-15000 right
+15000-16500 left
+16500-18500 a
+16500-17500 up
+17500-18500 down
