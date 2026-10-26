@@ -16,6 +16,7 @@ if (Test-Path (Join-Path $buildDir 'SDL2.dll')) {
     Copy-Item (Join-Path $buildDir 'SDL2.dll') $dist -Force
 }
 Copy-Item (Join-Path $root 'packaging\README.txt') $dist -Force
+Copy-Item (Join-Path $root 'LICENSE') (Join-Path $dist 'LICENSE.txt') -Force
 
 Write-Host "Packaged to $dist"
 Get-ChildItem $dist | Select-Object Name, Length | Format-Table -AutoSize

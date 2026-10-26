@@ -11,6 +11,7 @@ WHAT'S INCLUDED
   blazingstar.exe   the game (native x64)
   SDL2.dll          runtime dependency (window, input, audio)
   README.txt        this file
+  LICENSE.txt       PolyForm Noncommercial 1.0.0
 
 No game ROMs, BIOS images, or ROM-derived source are included. You supply those
 from your own legally obtained dumps.
@@ -69,6 +70,16 @@ KNOWN LIMITATIONS
   bank and the first bank; the second bank runs in the interpreter fallback. The
   game is correct (and verified block-for-block), but that bank is not accelerated.
 - Sound plays in the window and via --wav; --record still produces silent video.
+
+LICENCE
+-------
+This build is distributed under the PolyForm Noncommercial License 1.0.0: free
+for personal, hobby, research, educational and other noncommercial use; commercial
+use needs a separate licence. The full text is in LICENSE.txt and at
+<https://polyformproject.org/licenses/noncommercial/1.0.0>.
+
+The vendored neogeorecomp toolkit and its Musashi, z80 and ymfm components keep
+their own MIT / BSD-3-Clause licences (see the source repository).
 
 Blazing Star is (c) SNK. This build contains none of its code or data and requires
 your own ROM dumps to run.

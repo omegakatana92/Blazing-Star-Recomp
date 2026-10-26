@@ -52,6 +52,9 @@ cp "$BIN" "$APPDIR/usr/bin/blazingstar"
 cp "$ROOT/packaging/AppRun" "$APPDIR/AppRun"; chmod +x "$APPDIR/AppRun"
 cp "$ROOT/packaging/blazingstar.desktop" "$APPDIR/blazingstar.desktop"
 cp "$ROOT/packaging/blazingstar.svg" "$APPDIR/blazingstar.svg"
+mkdir -p "$APPDIR/usr/share/licenses/blazingstar"
+cp "$ROOT/LICENSE" "$APPDIR/usr/share/licenses/blazingstar/LICENSE"
+cp "$ROOT/LICENSE" "$APPDIR/LICENSE"
 
 # Bundle SDL2 (and convert the icon) with linuxdeploy when it is installed.
 if command -v linuxdeploy >/dev/null 2>&1; then
