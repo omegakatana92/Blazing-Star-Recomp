@@ -1,13 +1,13 @@
-# package.ps1 — assemble the distributable Windows x64 folder.
+# package.ps1 - assemble the distributable Windows x64 folder.
 # Usage:  powershell -NoProfile -ExecutionPolicy Bypass -File scripts\package.ps1
 $ErrorActionPreference = 'Stop'
 
-$root    = Split-Path -Parent $PSScriptRoot
+$root     = Split-Path -Parent $PSScriptRoot
 $buildDir = Join-Path $root 'build\Release'
 $dist     = Join-Path $root 'dist\BlazingStar-Recomp-Windows-x64'
 
 if (-not (Test-Path (Join-Path $buildDir 'blazingstar.exe'))) {
-    throw "blazingstar.exe not found in $buildDir — build Release first"
+    throw "blazingstar.exe not found in $buildDir - build Release first"
 }
 
 New-Item -ItemType Directory -Force -Path $dist | Out-Null

@@ -20,6 +20,9 @@ takes a coin and plays into Stage 1 on recompiled 68000 code.
 - Boot through the real MVS system ROM → eyecatcher → title → attract → coin/start.
 - `--verify` re-runs every recompiled block in the Musashi interpreter and compares
   registers, flags and bus writes: **0 mismatches** over the boot and gameplay sessions.
+- A profiling pass captures the entry points that only appear at runtime (computed jumps
+  into unrolled code), so the scripted Stage 1 session now runs **fully native — 0
+  interpreted instructions, 0 uncovered entry points** — at ~900 fps headless.
 - Frame output is **byte-identical** to the interpreter's.
 - YM2610 sound is synthesized and played through SDL2 (or `--wav`); keyboard and gamepad
   input through SDL2.
