@@ -121,7 +121,9 @@ blazingstar-recomp/
 
 ## License
 
-This repository is licensed under the GPL v2 (see [LICENSE](LICENSE)). The vendored
+This repository is licensed under the **PolyForm Noncommercial License 1.0.0**
+(see [LICENSE](LICENSE)): free for personal, hobby, research, educational and other
+noncommercial use; commercial use needs a separate licence. The vendored
 [neogeorecomp](neogeorecomp) toolkit and its third-party components (Musashi, z80,
 ymfm) keep their own permissive licences — see `neogeorecomp/LICENSE`,
 `neogeorecomp/NOTICE` and `neogeorecomp/LICENSES/`.

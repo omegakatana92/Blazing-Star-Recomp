@@ -80,6 +80,7 @@ parallel compilation keeps the build to minutes.
 
 - neogeorecomp toolkit by sp00nznet (MIT); Musashi (MIT), z80 (MIT), ymfm (BSD-3).
   Their licences are kept under `neogeorecomp/`.
-- This repository is GPL v2 (see `LICENSE`).
+- This repository is licensed under the **PolyForm Noncommercial License 1.0.0**
+  (see `LICENSE`): free for noncommercial use, commercial use by arrangement.
 - *Blazing Star* is (c) SNK / Yumekobo. This project contains none of its code or
   data and requires your own ROM dumps to run.
